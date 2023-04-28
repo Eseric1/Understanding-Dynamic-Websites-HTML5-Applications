@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Samano-assign9.css">
+    <meta charset="UTF-8">
+    <title>Basic HTML Page</title>
+    <script type="text/javascript">
+        // Hide the script from old browsers
+        function getQuote() {
+            // Create the arrays
+            ads = new Array(5);
+
+            // Initalize the arrays with ads
+            ads[0] = "<img src = 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/89e0f183506385.5d3eeed48b1e9.png' >";
+            ads[1] = "<img src = 'https://image.freepik.com/free-psd/food-social-media-promotion-banner-post-design-template_202595-331.jpg' >";
+            ads[2] = "<img src = 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a7c4f159790117.5a439d7052345.jpg' >";
+            ads[3] = "<img src = 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-taco-tuesday-ad-flyer-template-design-d2e0ad4717c0ebd6329679308519cc2c_screen.jpg?ts=1572007586' >";
+            ads[4] = "<img src = 'https://i.pinimg.com/originals/8c/5b/bd/8c5bbd67ce9e0472b2aaf160e881bc1e.jpg' >";
+
+            // Get random index into the arrays
+            i = Math.floor(Math.random() * ads.length);
+
+            // Return the random ad
+            return ads[i];
+        }
+        // Stop hiding script
+    </script>
+</head>
+
+<body>
+    <h1 class="gradient-text">Welcome to my Ad website!</h1>
+
+    <p>To see different food ads refresh the browser !.</p>
+    <!-- Display the random ad -->
+    <div id="ad"></div>
+    <script type="text/javascript">
+        // Get the ad element
+        var ad = document.getElementById("ad");
+        // Set its innerHTML to the random ad
+        ad.innerHTML = getQuote();
+    </script>
+</body>
+
+</html>
